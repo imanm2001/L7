@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HW</title>
+
+
+
+
+ <body>
+ <form id = "csrf" method="post" >
+{% csrf_token %}
+    {{form.as_p}}
+</form>
+ <div id="vue-app">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">L7</a>
+	<button class="navbar-toggler" style="margin-right:5px !important;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+  <div class="collapse navbar-collapse top_nav" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" @click="count++">Home </a>
+      </li>
+
+      <li class="nav-item dropdown" id="loginDropDown">
+        
+      </li>
+     
+  </div>
+</nav>
+
+<div id="main" class="h-100">
+<div v-if="user" class="container-fluid h-100 w-100">
+	<div class="row w-100">
+		<div class="col w-10">
+			<div id="appContainer">
+	
+			</div>
+		</div>
+	</div>
+</div>
+<div v-else id="loginForm">
+</div>
+</div>
+<div id="dialogs" ></div>
+</div>
+
+  
+  </body>
+ 
+  <script src="files/js/jquery.js"></script> 
+  <script src="files/js/bootstrap.bundle.min.js"></script> 
+  <link href="files/css/bootstrap.min.css" rel="stylesheet" >
+  
+  <script src="files/js/vue.js"></script>
+  <link href="files/css/L7.css" rel="stylesheet">
+  
+  <script src="files/js/jquery-ui.min.js"></script> 
+  <link href="files/css/jquery-ui.min.css" rel="stylesheet" >
+  <script src="files/js/papaparse.min.js"></script> 
+  <script src="files/js/md5.js" ></script>
+ 
+  <script src="files/js/main.js" type="module"></script>
+</html>
